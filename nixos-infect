@@ -167,6 +167,9 @@ EOF
   networking.useNetworkd = true;
   networking.dhcpcd.enable = false;
 
+  # Prevent creation of catchall dhcp config in /etc/systemd/network
+  networking.useDHCP = false;
+
   systemd.network.enable = true;
 
   systemd.network.networks.$eth0_name = {
