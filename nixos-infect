@@ -136,8 +136,8 @@ makeNetworkingConf() {
     networkConfig = {
       DHCP = "ipv4";
       IPv6AcceptRA = true;
-      Address = $eth1_ip6s
-      Gateway = $gateway6
+      Address = "$eth1_ip6s";
+      Gateway = "$gateway6";
     };
   };
 EOF
@@ -174,8 +174,8 @@ EOF
     networkConfig = {
       DHCP = "ipv4";
       IPv6AcceptRA = true;
-      Address = $eth0_ip6s
-      Gateway = $gateway6
+      Address = "$eth0_ip6s";
+      Gateway = "$gateway6";
     };
     linkConfig = {
       # make routing on this interface a dependency for network-online.target
