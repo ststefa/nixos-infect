@@ -387,7 +387,9 @@ infect() {
     mount "$esp" /boot
     find /boot -depth ! -path /boot -exec rm -rf {} +
   fi
-  /nix/var/nix/profiles/system/bin/switch-to-configuration boot
+  #/nix/var/nix/profiles/system/sw/bin/bootctl install
+  # https://nixos.wiki/wiki/Bootloader#From_an_installation_media
+  NIXOS_INSTALL_BOOTLOADER=1 /nix/var/nix/profiles/system/bin/switch-to-configuration boot
 }
 
 if [ ! -v PROVIDER ]; then
