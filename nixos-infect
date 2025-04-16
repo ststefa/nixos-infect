@@ -96,8 +96,6 @@ $bootcfg
   boot.initrd.availableKernelModules = [ ${availableKernelModules[@]} ];
   boot.initrd.kernelModules = [ "nvme" ];
 
-  console.keyMap = "de";
-
   fileSystems."/" = { device = "$rootfsdev"; fsType = "$rootfstype"; };
   $swapcfg
 }
