@@ -161,7 +161,7 @@ EOF
     predictable_inames="usePredictableInterfaceNames = lib.mkForce true;"
   fi
   cat > /etc/nixos/networking.nix << EOF
-{ lib, ... }: {
+{ ... }: {
   # This file was populated at runtime with the networking
   # details gathered from the active system.
 
